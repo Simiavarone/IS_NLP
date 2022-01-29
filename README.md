@@ -7,3 +7,4 @@ library(spacyr)
 spacy_install(prompt=FALSE)
 spacy_download_langmodel('es')
 ```
+(You may need to install [Anaconda](https://www.anaconda.com/products/individual#windows))
