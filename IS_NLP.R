@@ -2,7 +2,7 @@ library(quanteda)
 library(spacyr)
 library(utf8)
 
-lines <- readLines("spa_news_2021_10K-sentences.txt",encoding = "UTF-8")
+lines <- readLines("spa_news_2018_10K-sentences.txt",encoding = "UTF-8")
 
 # remove the line number and beginning tab
 for (i in  1:length(lines)) {
@@ -76,7 +76,6 @@ texts_caps <- unlist(lines_NFC)
 names(texts_caps) <- paste("Headline.", 1:length(texts_caps)) #assigns a name to each string
 corpus_capsQ <- corpus(texts_caps)
 docvars(corpus_capsQ, field="article") <- 1:length(texts_caps) #docvar with chapter number
-corpus_capsQ
 
 
 dfm_capsQ <- dfm(tokens(corpus_capsQ,
