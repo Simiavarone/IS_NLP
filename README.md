@@ -11,3 +11,9 @@ library(spacyr)
 spacy_install(prompt=FALSE)
 spacy_download_langmodel('es')
 ```
+
+Please note that the same code was used to process the two datasets used, so in order to reproduce all results, you should first execute the code, then change line 5 to :
+```R
+lines <- readLines("spa_news_2021_10K-sentences.txt",encoding = "UTF-8")
+```
+Then execute the script again to see the plots for year 2021.
